@@ -1,0 +1,49 @@
+[user]
+        name = Yasin Bahtiyar
+        email = yasin@bahtiyar.org
+        signingkey = 7185EF4425494C03
+[alias]
+        hist = log --pretty=tformat:\"%h %ad | %s%d [%an]\" --graph --date=short
+        co = checkout
+        c = commit
+        d = diff
+        p = push
+        st = status --short
+        br = branch
+        type = cat-file -t
+        dump = cat-file -p
+        lg = log --graph --pretty=tformat:'%>|(16)%C(red white)%h%Creset %C(green)(%cr)%Creset %s %>|(80)%C(reverse bold blue)<%an>%Creset %>|(100)%C(cyan)%d%Creset' --abbrev-commit --date=relative -10
+[core]
+        autocrlf = false
+        safecrlf = true
+        pager =
+        editor = code --wait
+[color "status"]
+        branch = blue
+[color]
+        status = true
+        diff = true
+        branch = true
+[filter "media"]
+        clean = git media clean %f
+        smudge = git media smudge %f
+        required = true
+[push]
+        default = simple
+[merge]
+        tool = code
+[diff]
+        tool = default-difftool
+        guitool = default-difftool
+[difftool "default-difftool"]
+        cmd = code --wait --diff $LOCAL $REMOTE
+[http]
+        cookiefile = /Users/null/.gitcookies
+[commit]
+        gpgsign = true
+[branch]
+	sort = committerdate
+[color "diff"]
+	meta = yellow black bold
+[pull]
+	rebase = false
