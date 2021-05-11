@@ -29,7 +29,7 @@ zinit wait lucid light-mode for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions \
       zinit-zsh/z-a-bin-gem-node \
-  as"command" from"gh-r" atinit'export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"' atload'eval "$(starship init zsh)"' bpick'*linux_amd64*' \
+  as"command" from"gh-r" bpick'*linux_amd64*' \
       junegunn/fzf \
       Aloxaf/fzf-tab \
   trigger-load'!man' \
