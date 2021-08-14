@@ -42,8 +42,8 @@
 [commit]
         gpgsign = true
 [branch]
-	sort = committerdate
+        sort = committerdate
 [color "diff"]
-	meta = yellow black bold
+        meta = yellow black bold
 [pull]
-	rebase = false
+        rebase = false

@@ -1,9 +1,10 @@
-if [ -n ${WSL_DISTRO_NAME} ]; then
-    WINUSER=$(cmd.exe /c "echo %USERNAME%")
-    DEVTO="/mnt/c/Users/${WINUSER%?}/dev"
-else
-    DEVTO="$HOME/dev"
-fi
+# if [ -n ${WSL_DISTRO_NAME} ]; then
+    # WINUSER=$(cmd.exe /c "echo %USERNAME%" 2> /dev/null)
+    # DEVTO="/mnt/c/Users/${WINUSER%?}/dev"
+# else
+    # DEVTO="$HOME/dev"
+# fi
+DEVTO="$HOME/dev"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -35,6 +36,7 @@ zinit wait lucid light-mode for \
   trigger-load'!man' \
       ael-code/zsh-colored-man-pages
 
+export ZLE_PROMPT_INDENT=0
 export FZF_COMPLETION_TRIGGER='>>'
 zinit ice as"command" id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
