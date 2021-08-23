@@ -4,6 +4,7 @@
 # else
     # DEVTO="$HOME/dev"
 # fi
+bindkey \^U backward-kill-line
 DEVTO="$HOME/dev"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -33,10 +34,13 @@ zinit wait lucid light-mode for \
   as"command" from"gh-r" bpick'*linux_amd64*' \
       junegunn/fzf \
       Aloxaf/fzf-tab \
+  as"command" from"gh-r" bpick'*linux-amd64*' mv"bazel* -> bazel"\
+      bazelbuild/bazelisk \
   trigger-load'!man' \
       ael-code/zsh-colored-man-pages
 
-export ZLE_PROMPT_INDENT=0
+export LC_ALL="en_US.UTF-8"
+export ZLE_RPROMPT_INDENT=0
 export FZF_COMPLETION_TRIGGER='>>'
 zinit ice as"command" id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
@@ -58,8 +62,8 @@ alias vim="nvim"
 alias dps='docker ps --format "table {{ printf \"%.3s\" .ID}} |> {{.Image}}\t{{.Names}}\t{{.Status}}"'
 alias l='exa'
 alias la='exa -a'
-alias ll='exa -lah'
-alias lg='exa -lah --git'
+alias ll='exa -lah --icons'
+alias lg='exa -lah --git --icons'
 alias ls='exa --color=auto'
 alias dev="cd $DEVTO"
 alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

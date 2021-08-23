@@ -1,14 +1,19 @@
+add_newline = false
+
 [character]
-success_symbol = "[μ ❯❯❯](bold green)"
-error_symbol = "[π ❯❯❯](bold red)"
+success_symbol = "[%{μ ❯❯❯%5G%}](bold green)"
+error_symbol = "[%{π ❯❯❯%5G%}](bold red)"
 
 [python]
-symbol = " "
+# symbol = " "
 # Only use the `python3` binary to get the version.
 python_binary = ["python3"]
 
 [aws]
 symbol = " "
+
+[gcloud]
+format = 'on [$symbol$account(\[$project\])]($style) %T '
 
 [conda]
 symbol = " "
@@ -55,6 +60,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+disabled = true
 
 [package]
 symbol = " "
@@ -69,7 +75,7 @@ symbol = " "
 symbol = " "
 
 [rust]
-symbol = " "
+# symbol = " "
 
 [swift]
 symbol = "ﯣ "
