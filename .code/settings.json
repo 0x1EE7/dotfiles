@@ -1,0 +1,297 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.labelFormat": "medium",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.wrapTabs": true,
+    "diffEditor.renderSideBySide": false,
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.graphql": "graphql"
+    },
+    "files.insertFinalNewline": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+    },
+    "editor.fontFamily": "Delugia",
+    "editor.fontLigatures": "'ss01', 'zero'",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.cursorStyle": "block",
+    "editor.formatOnSave": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.maxColumn": 80,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.renderLineHighlight": "all",
+    "editor.lineHeight": 18,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.cursorBlinking": "smooth",
+    "editor.renderControlCharacters": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.padding.bottom": 200,
+    "editor.renderWhitespace": "boundary",
+    "editor.mouseWheelScrollSensitivity": 4,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.enableFileLinks": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.allowChords": false,
+    "breadcrumbs.symbolPath": "last",
+    "editor.tokenColorCustomizations": {
+        "comments": "#72df9cea",
+        "[Dracula]": {
+            "textMateRules": [
+                {
+                    "scope": "string",
+                    "settings": {
+                        "foreground": "#ffff80",
+                        // "foreground": "#a8ff80",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.string.begin",
+                    "settings": {
+                        "foreground": "#a8ff80",
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.string.end",
+                    "settings": {
+                        "foreground": "#a8ff80",
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "comment",
+                    "settings": {
+                        "foreground": "#1effe1",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "storage.type",
+                    "settings": {
+                        "foreground": "#6AF7BE",
+                        "fontStyle": "italic",
+                    }
+                },
+                {
+                    "scope": "support.function.go",
+                    "settings": {
+                        "foreground": "#6AF7BE",
+                        "fontStyle": "bold",
+                    }
+                },
+                {
+                    "scope": "entity.name.type.class.python",
+                    "settings": {
+                        "foreground": "#f1fa8c",
+                        "fontStyle": "underline bold",
+                    }
+                },
+                {
+                    "scope": "meta.function-call.arguments.python",
+                    "settings": {
+                        "foreground": "#F7716D",
+                    }
+                },
+                {
+                    "scope": "meta.var.expr",
+                    "settings": {
+                        "foreground": "#BFF196",
+                    }
+                },
+                {
+                    "scope": "keyword.control.import.python",
+                    "settings": {
+                        "foreground": "#bd93f9",
+                    }
+                },
+                {
+                    "scope": "keyword.control.go",
+                    "settings": {
+                        "foreground": "#F56476",
+                    }
+                },
+                {
+                    "scope": "keyword.operator",
+                    "settings": {
+                        "foreground": "#ccf31d",
+                    }
+                },
+                {
+                    "scope": "entity.name.function",
+                    "settings": {
+                        "foreground": "#50FA7B",
+                        "fontStyle": "underline"
+                    }
+                },
+                {
+                    "scope": "support.function.builtin.go",
+                    "settings": {
+                        "foreground": "#FFBFBD",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "source.go",
+                    "settings": {
+                        "foreground": "#C3FCF1",
+                    }
+                },
+                {
+                    "scope": "keyword",
+                    "settings": {
+                        "foreground": "#ff80ac",
+                    }
+                },
+                {
+                    "scope": "variable.other.assignment.go",
+                    "settings": {
+                        "foreground": "#c0ff80",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.bracket.square.go",
+                    "settings": {
+                        "foreground": "#c0ff80",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.begin.bracket.round.go",
+                    "settings": {
+                        "foreground": "#bd93f9",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.end.bracket.round.go",
+                    "settings": {
+                        "foreground": "#bd93f9",
+                    }
+                },
+                {
+                    "scope": "punctuation.other.comma.go",
+                    "settings": {
+                        "foreground": "#bd93f9",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.begin.bracket.curly.go",
+                    "settings": {
+                        "foreground": "#ffff80",
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.end.bracket.curly.go",
+                    "settings": {
+                        "foreground": "#ffff80",
+                    }
+                },
+            ]
+        },
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "explorer.confirmDelete": false,
+    "workbench.list.horizontalScrolling": true,
+    "gitlens.codeLens.scopes": [
+        // "document",
+        "containers",
+        // "blocks"
+    ],
+    "workbench.colorCustomizations": {
+        "[Dracula]": {
+            "activityBarBadge.background": "#1effe1",
+            "breadcrumb.activeSelectionForeground": "#1effe1",
+            "contrastBorder": "#bd93f900",
+            "editor.findMatchHighlightBackground": "#1effe1a0",
+            "editor.hoverHighlightBackground": "#88da9c11", // Link black hover background fix
+            "editor.lineHighlightBackground": "#1337",
+            "editor.lineHighlightBorder": "#1effe1",
+            "editor.selectionHighlightBorder": "#1effe1",
+            "editor.wordHighlightBackground": "#1effe122",
+            "editor.wordHighlightBorder": "#1effe1",
+            "editor.wordHighlightStrongBackground": "#1effe122",
+            "editor.wordHighlightStrongBorder": "#1effe1",
+            "editorCursor.foreground": "#1effe1",
+            "editorLineNumber.activeForeground": "#1effe1",
+            "editorSuggestWidget.highlightForeground": "#1effe1",
+            "editorWidget.border": "#1effe1",
+            "editorWidget.resizeBorder": "#1effe1",
+            "list.activeSelectionForeground": "#1effe1",
+            "list.highlightForeground": "#1effe1",
+            "list.inactiveSelectionForeground": "#1effe1",
+            "menu.selectionForeground": "#1effe1",
+            "menubar.selectionForeground": "#1effe1",
+            "notificationLink.foreground": "#1effe1",
+            "panelTitle.activeBorder": "#1effe1",
+            "pickerGroup.foreground": "#1effe1",
+            "progressBar.background": "#1effe1",
+            "scrollbarSlider.activeBackground": "#1effe1",
+            "scrollbarSlider.background": "#1effe166",
+            "scrollbarSlider.hoverBackground": "#1effe1aa",
+            "settings.headerForeground": "#1effe1",
+            "settings.modifiedItemIndicator": "#1effe1",
+            "statusBar.background": "#1effe1",
+            "statusBar.foreground": "#4732A2",
+            "tab.activeBorder": "#1effe1",
+            "terminal.foreground": "#88da9c",
+            "terminal.selectionBackground": "#e9ff1ea1",
+            "textLink.foreground": "#1effe1",
+            // "contrastActiveBorder": "#bd93f977"
+            // "menubar.selectionForeground": "#64FFDA",
+        },
+    },
+    "breadcrumbs.enabled": true,
+    "explorer.openEditors.visible": 0,
+    "extensions.ignoreRecommendations": false,
+    "git.autofetch": true,
+    "gitlens.keymap": "chorded",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "telemetry.enableTelemetry": false,
+    "workbench.activityBar.visible": false,
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "gitlens.blame.avatars": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.views.branches.avatars": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.views.remotes.avatars": false,
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.views.tags.avatars": false,
+    "go.toolsManagement.autoUpdate": true,
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false,
+    "remote.WSL.useShellEnvironment": false,
+    "search.searchOnType": false,
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Dracula",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideActivityBar": true,
+    "zenMode.hideLineNumbers": false,
+    "gopls": {
+        "ui.navigation.importShortcut": "Definition",
+        "ui.navigation.symbolStyle": "Package"
+    },
+    "window.zoomLevel": -1,
+}
