@@ -138,4 +138,13 @@
         "key": "shift+f6",
         "command": "-workbench.action.focusPreviousPart"
     },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
 ]

@@ -24,7 +24,7 @@ zinit lucid for \
 zinit wait lucid light-mode for \
   pick'async.zsh' \
       mafredri/zsh-async \
-  atinit"zicompinit; zicdreplay" \
+  atinit"zicompinit; zicdreplay" atload"FAST_HIGHLIGHT[git-cmsg-len]=80"\
       zdharma/fast-syntax-highlighting \
   atload"_zsh_autosuggest_start" \
       zsh-users/zsh-autosuggestions \
