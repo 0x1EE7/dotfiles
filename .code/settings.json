@@ -6,7 +6,7 @@
     "workbench.editor.showTabs": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.untitled.hint": "hidden",
-    "workbench.editor.wrapTabs": true,
+    "workbench.editor.wrapTabs": false,
     "diffEditor.renderSideBySide": false,
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
@@ -20,7 +20,7 @@
     },
     "editor.fontFamily": "Delugia",
     "editor.fontLigatures": "'ss01', 'zero'",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.fontWeight": "400",
     "editor.cursorStyle": "block",
     "editor.formatOnSave": true,
@@ -31,7 +31,7 @@
     "editor.wordWrap": "on",
     "editor.minimap.enabled": true,
     "editor.renderLineHighlight": "all",
-    "editor.lineHeight": 18,
+    "editor.lineHeight": 24,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "editor.cursorBlinking": "smooth",
     "editor.renderControlCharacters": false,
@@ -39,13 +39,14 @@
     "editor.padding.bottom": 200,
     "editor.renderWhitespace": "boundary",
     "editor.mouseWheelScrollSensitivity": 4,
+    "terminal.integrated.flowControl": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.scrollback": 10000,
-    "terminal.integrated.macOptionIsMeta": true,
+    // "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.enableFileLinks": true,
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontWeight": "400",
+    // "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "300",
     "terminal.integrated.tabs.location": "left",
     "terminal.integrated.allowChords": false,
     "breadcrumbs.symbolPath": "last",
@@ -123,7 +124,10 @@
                 {
                     "scope": "keyword.control.go",
                     "settings": {
-                        "foreground": "#F56476",
+                        // "foreground": "#f0295e",
+                        // "foreground": "#f5654b",
+                        // "foreground": "#F56476",
+                        "foreground": "#ce8578",
                     }
                 },
                 {
@@ -155,7 +159,7 @@
                 {
                     "scope": "keyword",
                     "settings": {
-                        "foreground": "#ff80ac",
+                        "foreground": "#F56476",
                     }
                 },
                 {
@@ -185,7 +189,7 @@
                 {
                     "scope": "punctuation.other.comma.go",
                     "settings": {
-                        "foreground": "#bd93f9",
+                        "foreground": "#FFBFBD",
                     }
                 },
                 {
@@ -294,4 +298,15 @@
         "ui.navigation.symbolStyle": "Package"
     },
     "window.zoomLevel": -1,
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "pwsh.exe",
+            "args": [
+                "-c",
+                "wsl"
+            ],
+            "icon": "terminal-debian",
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
 }

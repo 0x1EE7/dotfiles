@@ -5,6 +5,8 @@
     # DEVTO="$HOME/dev"
 # fi
 bindkey \^U backward-kill-line
+bindkey ";5D" backward-word
+bindkey ";5C" forward-word
 DEVTO="$HOME/dev"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -24,12 +26,12 @@ zinit lucid for \
 zinit wait lucid light-mode for \
   pick'async.zsh' \
       mafredri/zsh-async \
-  atinit"zicompinit; zicdreplay" atload"FAST_HIGHLIGHT[git-cmsg-len]=80"\
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" atload"FAST_HIGHLIGHT[git-cmsg-len]=69" \
       zdharma/fast-syntax-highlighting \
-  atload"_zsh_autosuggest_start" \
-      zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall -q .' \
+  blockf \
       zsh-users/zsh-completions \
+  atload"!_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
       zinit-zsh/z-a-bin-gem-node \
   as"command" from"gh-r" bpick'*linux_amd64*' \
       junegunn/fzf \
