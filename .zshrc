@@ -67,8 +67,10 @@ alias la='exa -a'
 alias ll='exa -lah --icons'
 alias lg='exa -lah --git --icons'
 alias ls='exa --color=auto'
+alias tree='exa --icons --tree --level=2'
 alias dev="cd $DEVTO"
 alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gcloud='$HOME/google-cloud-sdk/bin/gcloud'
 zstyle ':completion:complete:*:options' sort false
 zstyle ":completion:*:git-checkout:*" sort false
 zstyle ':completion:*:descriptions' format '[%d]'
