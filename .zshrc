@@ -4,6 +4,8 @@
 # else
     # DEVTO="$HOME/dev"
 # fi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 bindkey \^U backward-kill-line
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
@@ -41,13 +43,28 @@ zinit wait lucid light-mode for \
   trigger-load'!man' \
       ael-code/zsh-colored-man-pages
 
-export LC_ALL="en_US.UTF-8"
 export ZLE_RPROMPT_INDENT=0
-export FZF_COMPLETION_TRIGGER='>>'
 zinit ice as"command" id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
+zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
+export FZF_COMPLETION_TRIGGER='>>'
+if type fdfind &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='fdfind --type f'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    _fzf_compgen_path() {
+        fdfind --hidden --follow --exclude ".git" . "$1"
+    }
+
+    # Use fdfind to generate the list for directory completion
+    _fzf_compgen_dir() {
+        fdfind --type d --hidden --follow --exclude ".git" . "$1"
+    }
+fi
+
+
+
+zshaddhistory() { whence ${${(z)1}[1]} >/dev/null || return 2 }
 ## History file configuration
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=120000
@@ -59,9 +76,13 @@ setopt HIST_IGNORE_DUPS            # ignore duplicated commands history list
 setopt HIST_IGNORE_SPACE           # ignore commands that start with space
 setopt HIST_VERIFY                 # show command with history expansion to user before running it
 setopt SHARE_HISTORY               # share command history data
+setopt GLOB_COMPLETE               # set globcomplete
+setopt MENU_COMPLETE               # set menucomplete
+setopt COMBINING_CHARS             # set combiningcharacters
 alias g="git"
 alias vim="nvim"
 alias dps='docker ps --format "table {{ printf \"%.3s\" .ID}} |> {{.Image}}\t{{.Names}}\t{{.Status}}"'
+alias k='kubectl'
 alias l='exa'
 alias la='exa -a'
 alias ll='exa -lah --icons'
@@ -70,7 +91,6 @@ alias ls='exa --color=auto'
 alias tree='exa --icons --tree --level=2'
 alias dev="cd $DEVTO"
 alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias gcloud='$HOME/google-cloud-sdk/bin/gcloud'
 zstyle ':completion:complete:*:options' sort false
 zstyle ":completion:*:git-checkout:*" sort false
 zstyle ':completion:*:descriptions' format '[%d]'
@@ -81,4 +101,10 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
   '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
 zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 export GPG_TTY=$(tty)
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
