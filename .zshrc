@@ -44,7 +44,7 @@ zinit wait lucid light-mode for \
       ael-code/zsh-colored-man-pages
 
 export ZLE_RPROMPT_INDENT=0
-zinit ice as"command" id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
+zinit ice id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
