@@ -147,4 +147,24 @@
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
     },
+    {
+        "key": "alt+\\",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+\\",
+        "command": "workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+    },
 ]
