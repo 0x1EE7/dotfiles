@@ -28,26 +28,30 @@ zinit lucid for \
 zinit wait lucid light-mode for \
   pick'async.zsh' \
       mafredri/zsh-async \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" atload"FAST_HIGHLIGHT[git-cmsg-len]=69" \
-      zdharma/fast-syntax-highlighting \
-  blockf \
-      zsh-users/zsh-completions \
-  atload"!_zsh_autosuggest_start" \
-      zsh-users/zsh-autosuggestions \
-      zinit-zsh/z-a-bin-gem-node \
+  as"command" from"gh-r" bpick'*linux-x86_64-v*' mv"bin/exa -> exa" cp"completions/exa.zsh -> _exa" blockf \
+      ogham/exa \
   as"command" from"gh-r" bpick'*linux_amd64*' \
       junegunn/fzf \
       Aloxaf/fzf-tab \
   as"command" from"gh-r" bpick'*linux-amd64*' mv"bazel* -> bazel"\
       bazelbuild/bazelisk \
   trigger-load'!man' \
-      ael-code/zsh-colored-man-pages
+      ael-code/zsh-colored-man-pages \
+  atload"FAST_HIGHLIGHT[git-cmsg-len]=69" \
+      zdharma/fast-syntax-highlighting \
+  atload"!_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions
 
-export ZLE_RPROMPT_INDENT=0
 zinit ice id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" blockf for \
+    zsh-users/zsh-completions
 
+autoload -Uz compinit
+compinit
+
+export ZLE_RPROMPT_INDENT=0
 export FZF_COMPLETION_TRIGGER='>>'
 if type fdfind &> /dev/null; then
     export FZF_DEFAULT_COMMAND='fdfind --type f'
@@ -91,6 +95,10 @@ alias ls='exa --color=auto'
 alias tree='exa --icons --tree --level=2'
 alias dev="cd $DEVTO"
 alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias nohist="fc -p $HISTFILE; unset HISTFILE"
+alias histon="fc -P"
+export HISTORY_IGNORE="(ls|ll|cd|pwd|dev|cd ..)"
+
 zstyle ':completion:complete:*:options' sort false
 zstyle ":completion:*:git-checkout:*" sort false
 zstyle ':completion:*:descriptions' format '[%d]'
