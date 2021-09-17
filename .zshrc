@@ -47,6 +47,8 @@ zinit load junegunn/fzf
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions
+zplugin ice
+zplugin snippet /usr/share/google-cloud-sdk/completion.zsh.inc
 
 autoload -Uz compinit
 compinit
@@ -111,9 +113,3 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
 zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 export GPG_TTY=$(tty)
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
