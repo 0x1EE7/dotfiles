@@ -44,8 +44,10 @@ zinit wait lucid light-mode for \
 
 zinit ice id-as"junegunn/fzf-scripts" multisrc"shell/{completion,key-bindings}.zsh" nocompile
 zinit load junegunn/fzf
-zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
-zinit snippet /usr/share/google-cloud-sdk/completion.zsh.inc
+if [[ -f /usr/share/google-cloud-sdk/completion.zsh.inc ]]; then
+    zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+    zinit snippet /usr/share/google-cloud-sdk/completion.zsh.inc
+fi
 zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions
 
