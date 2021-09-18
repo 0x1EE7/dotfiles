@@ -297,16 +297,16 @@
         "ui.navigation.importShortcut": "Definition",
         "ui.navigation.symbolStyle": "Package"
     },
-    "window.zoomLevel": -1,
     "terminal.integrated.profiles.linux": {
         "zsh": {
-            "path": "pwsh.exe",
+            "path": "pwsh",
             "args": [
                 "-c",
-                "wsl"
+                "zsh"
             ],
             "icon": "terminal-debian",
         }
     },
     "terminal.integrated.defaultProfile.linux": "zsh",
+    "window.zoomLevel": -1,
 }
