@@ -176,4 +176,8 @@
         "key": "ctrl+\\",
         "command": "-workbench.action.splitEditor"
     },
+    {
+        "key": "ctrl+alt+\\",
+        "command": "go.toggle.test.file"
+    },
 ]
