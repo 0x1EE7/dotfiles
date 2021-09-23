@@ -101,6 +101,10 @@ alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias nohist="fc -p $HISTFILE; unset HISTFILE"
 alias histon="fc -P"
 export HISTORY_IGNORE="(ls|ll|cd|pwd|dev|cd ..)"
+function _hist_indicator(){
+    [[ ! -v HISTFILE ]] && export NOHIST="%T ❎ " || export NOHIST="%T "
+}
+precmd_functions+=(_hist_indicator)
 
 zstyle ':completion:complete:*:options' sort false
 zstyle ":completion:*:git-checkout:*" sort false

@@ -13,7 +13,7 @@ python_binary = ["python3"]
 symbol = " "
 
 [gcloud]
-format = 'on [$symbol$account(\[$project\])]($style) %T '
+format = 'on [$symbol$account(\[$project\])]($style) '
 
 [conda]
 symbol = " "
@@ -79,3 +79,7 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
+[env_var.NOHIST]
+variable = "NOHIST"
+format = "[$env_value]($style)"
