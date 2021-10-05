@@ -3,7 +3,7 @@
         email = yasin@bahtiyar.org
         signingkey = 7185EF4425494C03
 [alias]
-        hist = log --pretty=tformat:\"%h %ad | %s%d [%an]\" --graph --date=short
+        hist = log --pretty=tformat:\"%h %ad | %s%d [%an]\" --graph --date=short -10
         co = checkout
         c = commit
         d = diff
@@ -12,7 +12,7 @@
         br = branch
         type = cat-file -t
         dump = cat-file -p
-        lg = log --graph --pretty=tformat:'%>|(16)%C(red white)%h%Creset %C(green)(%cr)%Creset %s %>|(80)%C(reverse bold blue)<%an>%Creset %>|(100)%C(cyan)%d%Creset' --abbrev-commit --date=relative -10
+        lg = log --graph --pretty=tformat:'%>|(16)%C(red white)%h%Creset %C(green)(%cr)%Creset%>|(100,mtrunc) %s %>|(100)%C(reverse cyan)<%an>%Creset%>|(100)%C(auto)%d∙' --abbrev-commit --date=relative -10
 [core]
         autocrlf = false
         safecrlf = true

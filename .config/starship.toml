@@ -13,7 +13,7 @@ python_binary = ["python3"]
 symbol = " "
 
 [gcloud]
-format = 'on [$symbol$account(\[$project\])]($style) '
+format = 'on [$symbol(\[$project\])]($style) '
 
 [conda]
 symbol = " "
