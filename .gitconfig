@@ -12,7 +12,7 @@
         br = branch
         type = cat-file -t
         dump = cat-file -p
-        lg = log --graph --pretty=tformat:'%>|(7)%C(red white) %h %Creset%C(green)(%cr)%Creset%>|(100,mtrunc) %s %>|(100)%C(reverse cyan) <%an> %Creset%>|(100)%C(auto)%d∙' --abbrev-commit --date=relative -10
+        lg = log --graph --pretty=tformat:'%>|(7)%C(reverse green bold) %h %Creset%C(green)(%cr)%Creset%>|(100,mtrunc) %s %>|(100)%C(reverse cyan bold) <%an> %Creset%>|(100)%C(auto)%d∙' --abbrev-commit --date=relative -10
 [core]
         autocrlf = false
         safecrlf = true

@@ -97,7 +97,7 @@ alias lg='exa -lah --git --icons'
 alias ls='exa --color=auto'
 alias tree='exa --icons --tree --level=2'
 alias dev="cd $DEVTO"
-alias dito='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias nohist="fc -p $HISTFILE; unset HISTFILE"
 alias histon="fc -P"
 export HISTORY_IGNORE="(ls|ll|cd|pwd|dev|cd ..)"
