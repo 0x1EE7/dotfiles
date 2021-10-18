@@ -220,4 +220,12 @@
         "command": "-workbench.action.compareEditor.previousChange",
         "when": "textCompareEditorVisible"
     },
+    {
+        "key": "ctrl+;",
+        "command": "merge-conflict.next"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "merge-conflict.previous"
+    },
 ]

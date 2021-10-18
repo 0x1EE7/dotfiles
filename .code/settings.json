@@ -249,10 +249,14 @@
             "settings.modifiedItemIndicator": "#1effe1",
             "statusBar.background": "#1effe1",
             "statusBar.foreground": "#4732A2",
+            "statusBar.debuggingBackground": "#4732A2",
+            "statusBar.debuggingForeground": "#FFBFBD",
             "tab.activeBorder": "#1effe1",
             "terminal.foreground": "#88da9c",
             "terminal.selectionBackground": "#e9ff1ea1",
             "textLink.foreground": "#1effe1",
+            "debugConsole.infoForeground": "#e9ff1ea1",
+            "debugConsole.errorForeground": "#FFBFBD"
             // "contrastActiveBorder": "#bd93f977"
             // "menubar.selectionForeground": "#64FFDA",
         },
