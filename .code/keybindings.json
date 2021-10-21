@@ -222,10 +222,12 @@
     },
     {
         "key": "ctrl+;",
-        "command": "merge-conflict.next"
+        "command": "merge-conflict.next",
+        "when": "!textCompareEditorVisible && isInDiffEditor"
     },
     {
         "key": "ctrl+'",
-        "command": "merge-conflict.previous"
+        "command": "merge-conflict.previous",
+        "when": "isInDiffEditor && !textCompareEditorVisible"
     },
 ]
