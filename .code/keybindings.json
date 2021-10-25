@@ -221,13 +221,13 @@
         "when": "textCompareEditorVisible"
     },
     {
-        "key": "ctrl+;",
+        "key": "ctrl+shift+;",
         "command": "merge-conflict.next",
-        "when": "!textCompareEditorVisible && isInDiffEditor"
+        "when": "!textCompareEditorVisible"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+shift+'",
         "command": "merge-conflict.previous",
-        "when": "isInDiffEditor && !textCompareEditorVisible"
+        "when": "!textCompareEditorVisible"
     },
 ]

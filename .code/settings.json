@@ -314,5 +314,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.iconTheme": "material-icon-theme",
     "task.autoDetect": "off",
-    "window.zoomLevel": -1,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "window.zoomLevel": -2,
 }
