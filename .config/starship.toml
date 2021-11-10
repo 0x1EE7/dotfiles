@@ -1,8 +1,8 @@
 add_newline = false
 
 [character]
-success_symbol = "[%{μ ❯❯❯%5G%}](bold green)"
-error_symbol = "[%{π ❯❯❯%5G%}](bold red)"
+success_symbol = "[μ ❯❯❯](bold green)"
+error_symbol = "[π ❯❯❯](bold red)"
 
 [python]
 # symbol = " "

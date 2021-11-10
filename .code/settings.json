@@ -253,12 +253,13 @@
             "statusBar.debuggingForeground": "#FFBFBD",
             "tab.activeBorder": "#1effe1",
             "terminal.foreground": "#88da9c",
-            "terminal.selectionBackground": "#e9ff1ea1",
+            "terminal.selectionBackground": "#FFBFBDa1",
             "textLink.foreground": "#1effe1",
             "debugConsole.infoForeground": "#e9ff1ea1",
-            "debugConsole.errorForeground": "#FFBFBD"
+            "debugConsole.errorForeground": "#FFBFBD",
             // "contrastActiveBorder": "#bd93f977"
             // "menubar.selectionForeground": "#64FFDA",
+            "editorHoverWidget.highlightForeground": "#c0ff80",
         },
     },
     "breadcrumbs.enabled": true,
@@ -267,7 +268,7 @@
     "git.autofetch": true,
     "gitlens.keymap": "chorded",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "workbench.activityBar.visible": false,
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
@@ -315,5 +316,5 @@
     "workbench.iconTheme": "material-icon-theme",
     "task.autoDetect": "off",
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-    "window.zoomLevel": -2,
+    "csharp.format.enable": false,
 }

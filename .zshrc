@@ -6,15 +6,16 @@
 # fi
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=239"
 bindkey \^U backward-kill-line
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
 DEVTO="$HOME/dev"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}0x1ee7/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+    command git clone https://github.com/0x1ee7/zinit "$HOME/.zinit/bin" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
@@ -38,7 +39,7 @@ zinit wait lucid light-mode for \
   trigger-load'!man' \
       ael-code/zsh-colored-man-pages \
   atload"FAST_HIGHLIGHT[git-cmsg-len]=69" \
-      zdharma/fast-syntax-highlighting \
+      0x1ee7/fast-syntax-highlighting \
   atload"!_zsh_autosuggest_start" \
       zsh-users/zsh-autosuggestions
 
@@ -102,7 +103,8 @@ alias nohist="fc -p $HISTFILE; unset HISTFILE"
 alias histon="fc -P"
 export HISTORY_IGNORE="(ls|ll|cd|pwd|dev|cd ..)"
 function _hist_indicator(){
-    [[ ! -v HISTFILE ]] && export NOHIST="%T ❎ " || export NOHIST="%T "
+    cttime=$(date +%H:%M:%S)
+    [[ ! -v HISTFILE ]] && export NOHIST="$cttime ❎ " || export NOHIST="$cttime "
 }
 precmd_functions+=(_hist_indicator)
 
