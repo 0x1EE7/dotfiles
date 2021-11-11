@@ -7,9 +7,11 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=239"
+export ZLE_REMOVE_SUFFIX_CHARS=$'\t\n;'
+export ZLE_SPACE_SUFFIX_CHARS=$'&|'
 bindkey \^U backward-kill-line
-bindkey ";5D" backward-word
-bindkey ";5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 DEVTO="$HOME/dev"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
