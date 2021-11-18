@@ -230,4 +230,8 @@
         "command": "merge-conflict.previous",
         "when": "!textCompareEditorVisible"
     },
+    {
+        "key": "shift+alt+t",
+        "command": "workbench.action.closeOtherEditors"
+    },
 ]

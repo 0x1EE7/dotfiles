@@ -301,17 +301,6 @@
         "ui.navigation.importShortcut": "Definition",
         "ui.navigation.symbolStyle": "Package"
     },
-    // "terminal.integrated.profiles.linux": {
-    //     "zsh": {
-    //         "path": "pwsh.exe",
-    //         "args": [
-    //             "-c",
-    //             "wsl"
-    //         ],
-    //         "icon": "terminal-debian",
-    //     }
-    // },
-    // "terminal.integrated.defaultProfile.linux": "zsh",
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.iconTheme": "material-icon-theme",
     "task.autoDetect": "off",
