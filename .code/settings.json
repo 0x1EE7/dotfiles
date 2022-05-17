@@ -20,17 +20,18 @@
     },
     "editor.fontFamily": "Delugia",
     "editor.fontLigatures": "'ss01', 'zero'",
-    "editor.fontSize": 16,
-    "editor.fontWeight": "400",
+    "editor.fontSize": 13,
+    "editor.fontWeight": "300",
     "editor.cursorStyle": "block",
     "editor.formatOnSave": true,
     "editor.suggest.showStatusBar": true,
+    // "editor.suggest.insertMode": "replace",
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": true,
     "editor.minimap.maxColumn": 80,
     "editor.wordWrap": "on",
     "editor.renderLineHighlight": "all",
-    "editor.lineHeight": 24,
+    // "editor.lineHeight": 24,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "editor.cursorBlinking": "smooth",
     "editor.renderControlCharacters": false,
@@ -44,20 +45,27 @@
     "terminal.integrated.scrollback": 10000,
     // "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.enableFileLinks": true,
-    // "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontWeight": "300",
-    "terminal.integrated.tabs.location": "left",
     "terminal.integrated.allowChords": false,
     "breadcrumbs.symbolPath": "last",
     "editor.tokenColorCustomizations": {
+        // "colors": ["#FBF48A","#A1FB8A","#8AFBD4","#8AC1FB","#B48AFB","#FB8AE1","#FB938A"],
         "comments": "#72df9cea",
         "[Dracula]": {
             "textMateRules": [
                 {
                     "scope": "string",
                     "settings": {
-                        "foreground": "#ffff80",
+                        "foreground": "#FBF48A",
+                        // "foreground": "#ffff80",
                         // "foreground": "#a8ff80",
+                    }
+                },
+                {
+                    "scope": "entity.name.namespace.rust",
+                    "settings": {
+                        "foreground": "#a8ff80",
                     }
                 },
                 {
@@ -75,10 +83,40 @@
                     }
                 },
                 {
+                    "scope": "support.type",
+                    "settings": {
+                        "foreground": "#8AFBD4",
+                        // "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "entity.name.type",
+                    "settings": {
+                        "foreground": "#8AFBD4",
+                        // "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "entity.name.function.rust",
+                    "settings": {
+                        "foreground": "#A1FB8A",
+                        // "fontStyle": "italic bold"
+                    }
+                },
+                {
                     "scope": "comment",
                     "settings": {
-                        "foreground": "#1effe1",
+                        "foreground": "#B48AFB",
+                        // "foreground": "#1effe1",
                         "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#8AC1FB",
+                        // "foreground": "#1effe1",
+                        // "fontStyle": "italic"
                     }
                 },
                 {
@@ -103,9 +141,16 @@
                     }
                 },
                 {
-                    "scope": "meta.function-call.arguments.python",
+                    "scope": "keyword.other.rust",
                     "settings": {
-                        "foreground": "#F7716D",
+                        "foreground": "#FB938A",
+                        // "foreground": "#F7716D",
+                    }
+                },
+                {
+                    "scope": "meta.use.rust",
+                    "settings": {
+                        "foreground": "#ccf31d",
                     }
                 },
                 {
@@ -188,7 +233,13 @@
                 {
                     "scope": "punctuation.other.comma.go",
                     "settings": {
-                        "foreground": "#FFBFBD",
+                        "foreground": "#FB8AE1",
+                    }
+                },
+                {
+                    "scope": "punctuation.comma.rust",
+                    "settings": {
+                        "foreground": "#FB8AE1",
                     }
                 },
                 {
@@ -218,7 +269,7 @@
         "[Dracula]": {
             "activityBarBadge.background": "#1effe1",
             "breadcrumb.activeSelectionForeground": "#1effe1",
-            "contrastBorder": "#bd93f900",
+            "contrastBorder": "#B48AFB00",
             "editor.findMatchHighlightBackground": "#1effe1a0",
             "editor.hoverHighlightBackground": "#88da9c11", // Link black hover background fix
             "editor.lineHighlightBackground": "#1337",
@@ -260,6 +311,8 @@
             // "contrastActiveBorder": "#bd93f977"
             // "menubar.selectionForeground": "#64FFDA",
             "editorHoverWidget.highlightForeground": "#c0ff80",
+            "panel.border": "#1effe1",
+            "editorGroup.border": "#1effe1",
         },
     },
     "breadcrumbs.enabled": true,
@@ -269,7 +322,6 @@
     "gitlens.keymap": "chorded",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "telemetry.telemetryLevel": "off",
-    "workbench.activityBar.visible": false,
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "[javascript]": {
@@ -294,16 +346,54 @@
     "window.titleBarStyle": "custom",
     "workbench.colorTheme": "Dracula",
     "zenMode.centerLayout": false,
-    "zenMode.fullScreen": false,
+    "zenMode.fullScreen": true,
     "zenMode.hideActivityBar": true,
+    "zenMode.hideStatusBar": false,
     "zenMode.hideLineNumbers": false,
     "gopls": {
         "ui.navigation.importShortcut": "Definition",
-        "ui.navigation.symbolStyle": "Package"
+        "ui.navigation.symbolStyle": "Package",
+        "ui.documentation.linksInHover": false,
+        "formatting.gofumpt": true,
     },
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.iconTheme": "material-icon-theme",
     "task.autoDetect": "off",
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-    "csharp.format.enable": false,
+    "go.enableCodeLens": {
+        "runtest": false
+    },
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": true,
+        "addTags": true,
+        "removeTags": false,
+        "fillStruct": false,
+        "testAtCursor": true,
+        "testFile": false,
+        "testPackage": false,
+        "generateTestForFunction": true,
+        "generateTestForFile": false,
+        "generateTestForPackage": false,
+        "addImport": true,
+        "testCoverage": true,
+        "playground": true,
+        "debugTestAtCursor": true,
+        "benchmarkAtCursor": false
+    },
+    "go.lintTool": "golangci-lint",
+    "[proto3]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "clang-format.language.proto.style": "{AlignConsecutiveAssignments: true, AlignConsecutiveDeclarations: true, AllowShortFunctionsOnASingleLine : Empty , IndentWidth: 4, ColumnLimit: 120}",
+    "gitlens.menus": {
+        "editorGroup": false
+    },
+    "workbench.activityBar.visible": false,
+    "rust-client.engine": "rust-analyzer",
+    "gitlens.plusFeatures.enabled": false,
+    "editor.lineNumbers": "relative",
+    "terminal.integrated.tabs.enabled": false,
+    "github.gitAuthentication": false,
+    "git.terminalAuthentication": false,
+    "window.zoomLevel": 1,
 }

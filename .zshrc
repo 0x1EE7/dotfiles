@@ -4,9 +4,11 @@
 # else
     # DEVTO="$HOME/dev"
 # fi
+. "$HOME/.cargo/env"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=239"
+export DISPLAY=:0
 bindkey \^U backward-kill-line
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
@@ -50,6 +52,7 @@ if [[ -f /usr/share/google-cloud-sdk/completion.zsh.inc ]]; then
     zinit snippet /usr/share/google-cloud-sdk/completion.zsh.inc
 fi
 zinit snippet https://raw.githubusercontent.com/bazelbuild/bazel/master/scripts/zsh_completion/_bazel
+zinit snippet https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
 zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions
 
@@ -60,7 +63,7 @@ export ZLE_RPROMPT_INDENT=0
 export FZF_COMPLETION_TRIGGER='??'
 if type fdfind &> /dev/null; then
     export FZF_DEFAULT_COMMAND='fdfind --type f'
-    export FZF_DEFAULT_OPTS='--bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all'
+    export FZF_DEFAULT_OPTS='--bind ctrl-s:toggle,ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all'
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     _fzf_compgen_path() {
         fdfind --hidden --follow --exclude ".git" . "$1"
@@ -90,6 +93,7 @@ setopt GLOB_COMPLETE               # set globcomplete
 setopt MENU_COMPLETE               # set menucomplete
 setopt COMBINING_CHARS             # set combiningcharacters
 alias g="git"
+alias gr="git co -"
 alias vim="nvim"
 alias dps='docker ps --format "table {{ printf \"%.3s\" .ID}} |> {{.Image}}\t{{.Names}}\t{{.Status}}"'
 alias k='kubectl'

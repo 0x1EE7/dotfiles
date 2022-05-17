@@ -1,10 +1,6 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+k f",
-        "command": "workbench.action.maximizeEditor"
-    },
-    {
         "key": "ctrl+k r",
         "command": "workbench.action.evenEditorWidths"
     },
@@ -115,11 +111,11 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+alt+win+right",
+        "key": "shift+alt+win+right",
         "command": "workbench.action.focusNextGroup"
     },
     {
-        "key": "ctrl+alt+win+left",
+        "key": "shift+alt+win+left",
         "command": "workbench.action.focusPreviousGroup"
     },
     {
@@ -234,4 +230,66 @@
         "key": "shift+alt+t",
         "command": "workbench.action.closeOtherEditors"
     },
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+s",
+        "command": "-workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    // {
+    //     "key": "ctrl+k f",
+    //     "command": "workbench.action.minimizeOtherEditors"
+    // },
+    {
+        "key": "ctrl+k f",
+        "command": "workbench.action.toggleEditorWidths"
+    },
+    {
+        "key": "ctrl+alt+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "-workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+alt+;",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+alt+'",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+f8",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.joinLines"
+    }
 ]

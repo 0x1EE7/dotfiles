@@ -8,12 +8,20 @@ error_symbol = "[π ❯❯❯](bold red)"
 # symbol = " "
 # Only use the `python3` binary to get the version.
 python_binary = ["python3"]
+disabled = true
 
 [aws]
 symbol = " "
 
 [gcloud]
-format = 'on [$symbol(\[$project\])]($style) '
+format = '|[$symbol($project)]($style)| '
+style = "bright-black"
+
+[kubernetes]
+disabled = false
+symbol = "⎈ "
+style = "bright-yellow"
+format = '|[$symbol$context(\($namespace\))]($style)| '
 
 [conda]
 symbol = " "
@@ -36,12 +44,15 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = "bright-green"
+format = '[$symbol$branch]($style)'
 
 [golang]
 symbol = " "
+format = '[$symbol($version)]($style) '
 
 [hg_branch]
-symbol = " "
+symbol = " "
 
 [java]
 symbol = " "
@@ -64,6 +75,7 @@ disabled = true
 
 [package]
 symbol = " "
+disabled = true
 
 [perl]
 symbol = " "
@@ -76,6 +88,7 @@ symbol = " "
 
 [rust]
 # symbol = " "
+disabled = true
 
 [swift]
 symbol = "ﯣ "
