@@ -31,6 +31,10 @@ zinit lucid for \
 zinit wait lucid light-mode for \
   pick'async.zsh' \
       mafredri/zsh-async \
+  as"command" pick'kubectx' \
+      ahmetb/kubectx \
+  as"command" pick'kubens' \
+      ahmetb/kubectx \
   as"command" from"gh-r" bpick'*linux-x86_64-v*' mv"bin/exa -> exa" cp"completions/exa.zsh -> _exa" blockf \
       ogham/exa \
   as"command" from"gh-r" bpick'*linux_amd64*' \
@@ -88,6 +92,7 @@ setopt HIST_EXPIRE_DUPS_FIRST      # delete duplicates first when HISTFILE size 
 setopt HIST_IGNORE_DUPS            # ignore duplicated commands history list
 setopt HIST_IGNORE_SPACE           # ignore commands that start with space
 setopt HIST_VERIFY                 # show command with history expansion to user before running it
+setopt HIST_FIND_NO_DUPS           # ignore duplicated commands in find
 setopt SHARE_HISTORY               # share command history data
 setopt GLOB_COMPLETE               # set globcomplete
 setopt MENU_COMPLETE               # set menucomplete
@@ -97,6 +102,9 @@ alias gr="git co -"
 alias vim="nvim"
 alias dps='docker ps --format "table {{ printf \"%.3s\" .ID}} |> {{.Image}}\t{{.Names}}\t{{.Status}}"'
 alias k='kubectl'
+alias kc='kubectx'
+alias kn='kubens'
+alias j='jq --unbuffered'
 alias ls='exa --color=auto'
 alias l='ls'
 alias la='ls -a'
@@ -107,6 +115,7 @@ alias dev="cd $DEVTO"
 alias dit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias nohist="fc -p $HISTFILE; unset HISTFILE"
 alias histon="fc -P"
+alias wg="watch --color git diff --color=always --stat main -- ."
 export HISTORY_IGNORE="(ls|ll|cd|pwd|dev|cd ..)"
 function _hist_indicator(){
     cttime=$(date +%H:%M:%S)
@@ -126,3 +135,4 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
 zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 export GPG_TTY=$(tty)
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
