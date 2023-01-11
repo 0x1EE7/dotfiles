@@ -35,6 +35,8 @@ zinit wait lucid light-mode for \
       ahmetb/kubectx \
   as"command" pick'kubens' \
       ahmetb/kubectx \
+  as"command" from"gh-r" bpick'*Linux_x86_64*' \
+      derailed/k9s \
   as"command" from"gh-r" bpick'*linux-x86_64-v*' mv"bin/exa -> exa" cp"completions/exa.zsh -> _exa" blockf \
       ogham/exa \
   as"command" from"gh-r" bpick'*linux_amd64*' \
@@ -136,3 +138,6 @@ zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=do
 export GPG_TTY=$(tty)
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# Created by `pipx` on 2022-10-31 15:02:29
+export PATH="$PATH:/home/yazz/.local/bin"
